@@ -1,12 +1,23 @@
-1. create tables
-   --
-2. write endpoints for creation and login
+Requests:
 
-   - sign up is simple
-   - login
-     create in sessions table with linux time stamp
-   - check endpoint
-     check if session is over or not
-     if over redirect to login page
+healthcheck:
 
-3. write javascript code for login screen and home screen
+GET http://localhost:8080/health
+
+usercreate:
+
+POST http://localhost:8080/sign-up
+{"username":"user","password":"password"}
+
+userauth:
+
+POST http://localhost:8080/sign-in
+{"username":"user","password":"password"}
+
+usersignout:
+
+POST http://localhost:8080/sign-out
+
+protectedRoute:
+
+GET http://localhost:8080/protected-route
